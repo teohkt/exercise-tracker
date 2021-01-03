@@ -76,9 +76,19 @@ Delete routes can be checked by sending a delete request using the id of the obj
 To start the front end server, move into the top most directory and run `npm start`. This will launch a new web page and output a message in the terminal. The front end was managed by React, which is a javascript framework.
 
 # Setup
-The bootstrap module was imported using `$ npm install bootstrap` instead of using the cdn. Bootstrap was imported into our app through src/App.js using 
+The bootstrap module was imported using `$ npm install bootstrap jquery popper` instead of using the cdn. This version of bootstrap installed was 4.5. Certain functions such as the hamburger menue would not work without the installation of jquery and popper. Bootstrap was imported into our app through src/App.js using 
 
->import "bootstrap/dist/css/bootstrap.min.css";
+`````
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+`````
 
-To connect all the components to gether, react-router-dom needed to be installed ($ npm install react-router-dom)
+To connect all the components to gether, react-router-dom needed to be installed ($ npm install react-router-dom). It was then imported by using
+>import { BrowserRouter as Router, Route } from "react-router-dom";
+and the JSX code was wrapped with <Router></Router>.
+
+# JSX
+Some syntax changes are involved when moving from js to jsx. 
+1. a => Link
+2. href => to
 
