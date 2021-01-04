@@ -87,8 +87,19 @@ To connect all the components to gether, react-router-dom needed to be installed
 >import { BrowserRouter as Router, Route } from "react-router-dom";
 and the JSX code was wrapped with <Router></Router>.
 
+## Dates
+Datepicker was used to provide a nice calendar to select appropriate dates instead of just typing in an accepted string.
+>$ npm install react-datepicker
+`````
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+`````
+
 # JSX
 Some syntax changes are involved when moving from js to jsx. 
 1. a => Link
 2. href => to
 
+# Connecting Front end to Back end
+To allow for the frontend to send HTTP requests to the server endpoints, axios was used. 
+>$ npm install axios
